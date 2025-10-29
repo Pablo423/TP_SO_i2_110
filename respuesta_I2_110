@@ -1,2 +1,36 @@
 Pablo Nuñez
 Tomas Fabris
+a-¿Cómo actualizo mi repositorio, al estado que esté el repo que hice FORK?
+
+
+b-¿Puede ALFA actualizar su FORK al estado del fork de GAMMA?
+
+
+c-¿Puede GAMMA actualizar su FORK al estado del fork de ALFA?
+
+
+d-¿Los datos que tenía en mi repositorio , editados por mi, se pierden si quiero actualizar
+el fork?
+
+
+e- realizar un listado, paso a paso ,de los comando necesarios para resolver este TP por
+orden de ejecución de los mismos junto con los apellidos y nombre de los alumnos 
+
+Alfa: Tomas Fabris
+git clone https://github.com/Pablo423/TP_SO_i2_110.git
+cd TP_SO_i2_110
+git add fork.txt
+git commit -m "Agrego mis datos personales (ALFA)"
+git push origin main
+git remote add upstream https://github.com/Pablo423/TP_SO_i2_110.git
+git fetch upstream
+git merge upstream/main
+git  merge --abort
+git pull origin main
+
+Beta: Nuñez Pablo
+git clone https://github.com/Pablo423/TP_SO_i2_110.git
+cd TP_SO_i2_110
+git add .
+git commit -m "Agregue nuevodato"
+git push origin main
